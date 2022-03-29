@@ -1,0 +1,11 @@
+function palindrome(str) {
+   let polishedString =  str.replace(/\W+\_/g, "").toLowerCase();
+    let reversedString = polishedString.split("").reverse().join("");
+    console.log(polishedString, reversedString)
+    if (polishedString != reversedString) {
+        return false;
+    }
+    return true;
+}
+let result = palindrome("umuvumu");
+console.log(result);
